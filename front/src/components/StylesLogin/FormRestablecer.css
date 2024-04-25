@@ -1,0 +1,59 @@
+/* Estilo del contenedor principal */
+.RestablecerContraseña-wrapper {
+    width: 620px; /* Ancho del contenedor */
+    background-color: transparent; /* Fondo transparente */
+    border: 2px solid rgba(49, 71, 213, .5); /* Borde con transparencia */
+    backdrop-filter: blur(30px); /* Aplica un efecto de desenfoque al fondo */
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2); /* Sombra */
+    color: black; /* Color de texto */
+    border-radius: 10px; /* Borde redondeado */
+    padding: 30px 40px; /* Relleno interno */
+    text-align: center; /* Alineación del texto al centro */
+}
+
+/* Estilo del título */
+.RestablecerContraseña-wrapper .title {
+    display: flex; /* Muestra los elementos como una fila flexible */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    margin-bottom: -10px; /* Margen inferior negativo */
+}
+
+/* Estilo de las cajas de entrada de texto */
+.RestablecerContraseña-wrapper .input-box {
+    position: relative; /* Posición relativa */
+    width: 100%; /* Ancho completo */
+    height: 50px; /* Altura */
+    margin: 30px 0; /* Margen */
+}
+
+/* Estilo del icono en la caja de entrada de texto */
+.RestablecerContraseña-wrapper .input-box .icon {
+    position: absolute; /* Posición absoluta */
+    right: 20px; /* Derecha */
+    top: 50%; /* Centra verticalmente */
+    transform: translateY(-50%); /* Transforma verticalmente */
+    font-size: 16px; /* Tamaño del texto */
+}
+
+/* Estilo del botón (Restablecer) */
+.RestablecerContraseña-wrapper button[type="submit"] {
+    width: 100%; /* Ancho completo */
+    height: 40px; /* Altura */
+    background: burlywood; /* Fondo */
+    border: none; /* Quita el borde */
+    outline: none; /* Quita el contorno */
+    border-radius: 40px; /* Borde redondeado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1); /* Sombra */
+    cursor: pointer; /* Cursor al pasar por encima */
+    font-size: 16px; /* Tamaño del texto */
+    color: black; /* Color del texto */
+    font-weight: 700; /* Peso de la fuente */
+}
+
+/* Estilo del boton (Iniciar Sesion) */
+.RestablecerContraseña-wrapper .top-right-button {
+    width: 20%;
+    position: absolute;
+    top: 10px; /* Ajusta la distancia desde la parte superior según tu preferencia */
+    right: 10px; /* Ajusta la distancia desde la derecha según tu preferencia */
+}

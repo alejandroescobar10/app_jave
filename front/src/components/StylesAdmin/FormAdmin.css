@@ -1,0 +1,33 @@
+.Admin-wrapper {
+    width: 750px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .800);
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: black;
+    border-radius: 10px;
+    padding: 30px 40px;
+    font-size: 26px;
+    text-align: center;
+}
+
+.Admin-wrapper .title {
+    display: flex; /* Muestra los elementos como una fila flexible */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    margin-bottom: -10px; /* Margen inferior negativo */
+}
+
+.Admin-wrapper button {
+    width: 30%; /* Ancho completo */
+    height: 30px; /* Altura */
+    background: burlywood; /* Fondo blanco */
+    border: none; /* Quita el borde */
+    outline: none; /* Quita el contorno */
+    border-radius: 40px; /* Borde redondeado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1); /* Sombra */
+    cursor: pointer; /* Cursor al pasar por encima */
+    font-size: 14px; /* Tamaño del texto */
+    color: black; /* Color del texto */
+    font-weight: 10; /* Peso de la fuente */
+    margin-top: 10px; /* Margen superior */
+}

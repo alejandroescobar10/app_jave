@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaUser, FaLock } from "react-icons/fa";
 import { MdEmail, MdOutlinePhoneIphone } from "react-icons/md";
-import './StylesAdmin/FormCrearUsuario.css';
+import '../../Styles/StylesAdmin/FormCrearUsuario.css';
 
 const CrearUsuarioForm = ({ onBackClick }) => {
     const handleCreateUserClick = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import './StylesLogin/FormRestablecer.css';
+import '../../Styles/StylesLogin/FormRestablecer.css';
 import { FaLock, FaUser} from "react-icons/fa";
 
 const RestablecerFrom = ({ onBackClick }) => {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './StylesLogin/FormIniciarSesion.css';
-import './StylesLogin/FormRestablecer.css';
+import '../../Styles/StylesLogin/FormIniciarSesion.css';
+import '../../Styles/StylesLogin/FormRestablecer.css';
 import { FaUser, FaLock } from "react-icons/fa";
 import RestablecerFrom from './FormRestablecer';
 

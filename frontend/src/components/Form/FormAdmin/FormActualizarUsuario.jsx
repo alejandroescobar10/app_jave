@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './StylesAdmin/FormActualizarUsuario.css';
-import './StylesAdmin/FormCrearUsuario.css';
+import '../../Styles/StylesAdmin/FormActualizarUsuario.css';
+import '../../Styles/StylesAdmin/FormCrearUsuario.css';
 import CrearUsuarioForm from './FormCrearUsuario'
 
 const UpdateUserForm = ({ onBackClick }) => {

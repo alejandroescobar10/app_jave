@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './StylesAdmin/FormAdmin.css';
-import './StylesAdmin/FormActualizarUsuario.css';
+import '../../Styles/StylesAdmin/FormAdmin.css';
+import '../../Styles/StylesAdmin/FormActualizarUsuario.css';
 import UpdateUserForm from './FormActualizarUsuario';
 
 const FormAdmin = () => {

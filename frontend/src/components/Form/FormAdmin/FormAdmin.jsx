@@ -1,26 +1,76 @@
 import React, { useState } from 'react';
+// IMPORTACIONES DE LOS FORMULARIOS CSS //
 import '../../Styles/StylesAdmin/FormAdmin.css';
 import '../../Styles/StylesAdmin/FormActualizarUsuario.css';
+import '../../Styles/StylesAdmin/FormRegistroEquipo.css';
+import '../../Styles/StylesAdmin/FormBusquedaEquipo.css';
+import '../../Styles/StylesAdmin/FormSolicitudPrestamo.css'; 
+// IMPORTACIONES DE LOS COMPONENTES DE LOS FORMULARIOS //
 import UpdateUserForm from './FormActualizarUsuario';
+import RegistroEquipoForm from './FormRegistroEquipo';
+import BusquedaEquipo from './FormBusquedaEquipo';
+import SolicitudPrestamo from './FormSolicitudPrestamo'; 
 
 const FormAdmin = () => {
-    // Funcion para controlar la visualización del formulario (Actualizar Usuario)
     const [showUserUpdateForm, setShowUserUpdateForm] = useState(false);
+    const [showEquipmentRegistrationForm, setShowEquipmentRegistrationForm] = useState(false);
+    const [showEquipmentSearchForm, setShowEquipmentSearchForm] = useState(false);
+    const [showLoanRequestForm, setShowLoanRequestForm] = useState(false); // Estado para mostrar la vista de solicitud de préstamos
 
-    // Funcion para mostrar el formulario (Actualizar Usuario) cuando se hace clic en "Actualizar Usuario"
     const handleUpdateUserClick = () => {
         setShowUserUpdateForm(true);
+        setShowEquipmentRegistrationForm(false);
+        setShowEquipmentSearchForm(false);
+        setShowLoanRequestForm(false); // Ocultar la vista de solicitud de préstamos al cambiar a otra vista
     };
 
-    // Funcion para ocultar el formulario Crear Usuario cuando se hace clic en "Volver" desde ese formulario
     const handleBackToAdminFromUpdateUser = () => {
         setShowUserUpdateForm(false);
     };
+
+    const handleEquipmentRegistrationClick = () => {
+        setShowEquipmentRegistrationForm(true);
+        setShowUserUpdateForm(false);
+        setShowEquipmentSearchForm(false);
+        setShowLoanRequestForm(false); // Ocultar la vista de solicitud de préstamos al cambiar a otra vista
+    };
+
+    const handleBackToAdminFromEquipmentRegistration = () => {
+        setShowEquipmentRegistrationForm(false);
+    };
+
+    const handleEquipmentSearchClick = () => {
+        setShowEquipmentSearchForm(true);
+        setShowUserUpdateForm(false);
+        setShowEquipmentRegistrationForm(false);
+        setShowLoanRequestForm(false); // Ocultar la vista de solicitud de préstamos al cambiar a otra vista
+    };
+
+    const handleBackToAdminFromEquipmentSearch = () => {
+        setShowEquipmentSearchForm(false);
+    };
+
+    const handleLoanRequestClick = () => {
+        setShowLoanRequestForm(true);
+        setShowUserUpdateForm(false);
+        setShowEquipmentRegistrationForm(false);
+        setShowEquipmentSearchForm(false);
+    };
+
+    const handleBackToAdminFromLoanRequest = () => {
+        setShowLoanRequestForm(false);
+    };
+
     return (
         <div className='Admin-wrapper'>
             {showUserUpdateForm ? (
-                // Muestra el formulario Crear Usuario si showUserUpdateForm es true
                 <UpdateUserForm onBackClick={handleBackToAdminFromUpdateUser} />
+            ) : showEquipmentRegistrationForm ? (
+                <RegistroEquipoForm onBackClick={handleBackToAdminFromEquipmentRegistration} />
+            ) : showEquipmentSearchForm ? (
+                <BusquedaEquipo onBackClick={handleBackToAdminFromEquipmentSearch} />
+            ) : showLoanRequestForm ? (
+                <SolicitudPrestamo onBackClick={handleBackToAdminFromLoanRequest} />
             ) : (
                 <form action=''>
 
@@ -35,55 +85,20 @@ const FormAdmin = () => {
                         <div className='button'>
                             <button onClick={handleUpdateUserClick}>Update User</button>
                         </div>
-                        
+
                         {/* Boton Registro de Equipos */}
                         <div className='button'>
-                            <button type="submit">Equipment Registration</button>
+                            <button onClick={handleEquipmentRegistrationClick}>Equipment Registration</button>
                         </div>
 
                         {/* Boton Busquedad de Equipos */}
                         <div className='button'>
-                            <button type="submit">Search of equipment</button>
+                            <button onClick={handleEquipmentSearchClick}>Search Equipment</button>
                         </div>
 
                         {/* Boton Solicitud de Prestamos */}
                         <div className='button'>
-                            <button type="submit">Solicitude of loan</button>
-                        </div>
-
-                        {/* Boton Fecha de Retorno */}
-                        <div className='button'>
-                            <button type="submit">Date of return</button>
-                        </div>
-
-                        {/* Boton Devolucion de Equipos */}
-                        <div className='button'>
-                            <button type="submit">Return of equipment</button>
-                        </div>
-
-                        {/* Boton Renovacion */}
-                        <div className='button'>
-                            <button type="submit">Renewal</button>
-                        </div>
-
-                        {/* Boton Multas por Retraso */}
-                        <div className='button'>
-                            <button type="submit">Fines by delay</button>
-                        </div>
-
-                        {/* Boton Reservaciones */}
-                        <div className='button'>
-                            <button type="submit">Bookings</button>
-                        </div>
-
-                        {/*  Boton Lista de Espera */}
-                        <div className='button'>
-                            <button type="submit">Waiting list</button>
-                        </div>
-
-                        {/*  Boton Estado del Equipo */}
-                        <div className='button'>
-                            <button type="submit">State of equipment</button>
+                            <button onClick={handleLoanRequestClick}>Loan Request</button>
                         </div>
                     </div>
                 </form>

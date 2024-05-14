@@ -1,19 +1,19 @@
 /* Estilo del título */
-.ActualizarUsuario-wrapper .title {
+.RegistroEquipo-wrapper .title {
     display: flex; /* Muestra los elementos como una fila flexible */
     justify-content: center; /* Distribuye el espacio entre los elementos */
     margin-bottom: -10px; /* Margen inferior negativo */
 }
 
-.ActualizarUsuario-wrapper .container-button {
-    padding: 30px 250px;
+.RegistroEquipo-wrapper .container-button {
+    padding: 30px 200px;
     font-size: 16px;
     text-align: center;
     display: flex; /* Usa flexbox para alinear los botones horizontalmente */
     justify-content: space-between; /* Distribuye los botones uniformemente */
 }
 
-.ActualizarUsuario-wrapper button {
+.RegistroEquipo-wrapper button {
     width: 125%;
     height: 45px;
     background: burlywood;
@@ -28,7 +28,7 @@
     margin-bottom: -20px;
 }
 
-.ActualizarUsuario-wrapper table {
+.RegistroEquipo-wrapper table {
     width: 1100px;
     color: black;
     font-size: 14px;
@@ -36,26 +36,26 @@
     border-collapse: collapse;
 }
 
-.ActualizarUsuario-wrapper thead {
+.RegistroEquipo-wrapper thead {
     background: burlywood;
 }
 
-.ActualizarUsuario-wrapper th {
+.RegistroEquipo-wrapper th {
     padding: 20px 15px;
     font-weight: 1100;
     text-transform: uppercase;
 }
 
-.ActualizarUsuario-wrapper td {
+.RegistroEquipo-wrapper td {
     padding: 15px;
     border-bottom: solid 1px black;
 }
 
-.ActualizarUsuario-wrapper tbody tr {
+.RegistroEquipo-wrapper tbody tr {
     cursor: pointer;
 }
 
-.ActualizarUsuario-wrapper tbody tr:hover {
+.RegistroEquipo-wrapper tbody tr:hover {
     background: rgba(23, 32, 42, .2);
 }
 

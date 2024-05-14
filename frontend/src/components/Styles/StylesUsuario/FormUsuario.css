@@ -1,4 +1,4 @@
-.Admin-wrapper {
+.Usuario-wrapper {
     width: 1200px;
     background-color: transparent;
     border: 2px solid rgba(255, 255, 255, .800);
@@ -11,13 +11,13 @@
     text-align: center;
 }
 
-.Admin-wrapper .title {
+.Usuario-wrapper .title {
     display: flex; /* Muestra los elementos como una fila flexible */
     justify-content: space-between; /* Distribuye el espacio entre los elementos */
     margin-bottom: -10px; /* Margen inferior negativo */
 }
 
-.Admin-wrapper button {
+.Usuario-wrapper button {
     width: 30%; /* Ancho completo */
     height: 30px; /* Altura */
     background: burlywood; /* Fondo blanco */

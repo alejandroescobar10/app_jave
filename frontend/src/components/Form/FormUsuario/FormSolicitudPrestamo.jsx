@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
-import '../../Styles/StylesAdmin/FormSolicitudPrestamo.css'; 
+import '../../Styles/StylesUsuario/FormSolicitudPrestamo.css'; 
 
-const SolicitudPrestamoAdmin = ({ onBackClick }) => {
+const SolicitudPrestamo = ({ onBackClick }) => {
     // Estados para los datos del préstamo
     const [nombreUsuario, setNombreUsuario] = useState('');
     const [equipoPrestamo, setEquipoPrestamo] = useState('');
     const [fechaPrestamo, setFechaPrestamo] = useState('');
     const [motivoPrestamo, setMotivoPrestamo] = useState('');
-    const [estadoPrestamo, setEstadoPrestamo] = useState('Pendiente');
 
     // Función para manejar el envío de la solicitud
     const handleSubmit = (e) => {
         e.preventDefault();
         // Aquí puedes agregar la lógica para enviar la solicitud de préstamo
-        console.log('Solicitud de préstamo enviada:', { nombreUsuario, equipoPrestamo, fechaPrestamo, motivoPrestamo, estadoPrestamo });
+        console.log('Solicitud de préstamo enviada:', { nombreUsuario, equipoPrestamo, fechaPrestamo, motivoPrestamo });
         // Por ahora, solo mostramos los datos de la solicitud en la consola
     };
 
@@ -29,7 +28,7 @@ const SolicitudPrestamoAdmin = ({ onBackClick }) => {
             <h1>Gestión de Préstamos</h1>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
-                    <label htmlFor="nombreUsuario">Nombre de Usuario:</label>
+                    <label htmlFor="nombreUsuario">ID Usuario:</label>
                     <input
                         type="text"
                         id="nombreUsuario"
@@ -63,18 +62,6 @@ const SolicitudPrestamoAdmin = ({ onBackClick }) => {
                         onChange={(e) => setMotivoPrestamo(e.target.value)}
                     />
                 </div>
-                <div className="form-group">
-                    <label htmlFor="estadoPrestamo">Estado del préstamo:</label>
-                    <select
-                        id="estadoPrestamo"
-                        value={estadoPrestamo}
-                        onChange={(e) => setEstadoPrestamo(e.target.value)}
-                    >
-                        <option value="Pendiente">Pendiente</option>
-                        <option value="Aprobado">Aprobado</option>
-                        <option value="Rechazado">Rechazado</option>
-                    </select>
-                </div>
                 <div className="button-group">
                     <button type="submit">Enviar Solicitud</button>
                     <button type="button" onClick={handleBackClick}>Volver</button>
@@ -84,4 +71,4 @@ const SolicitudPrestamoAdmin = ({ onBackClick }) => {
     );
 };
 
-export default SolicitudPrestamoAdmin;
+export default SolicitudPrestamo;

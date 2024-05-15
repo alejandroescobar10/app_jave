@@ -48,17 +48,17 @@
 }
 
 .button-group button[type="submit"] {
-    background-color: #4caf50;
-    color: white;
+    background-color: burlywood;
+    color: black;
 }
 
 .button-group button[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #bbb;
 }
 
 .button-group button[type="button"] {
-    background-color: #ccc;
-    color: #333;
+    background-color: burlywood;
+    color: black;
 }
 
 .button-group button[type="button"]:hover {
